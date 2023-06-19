@@ -38,6 +38,12 @@ Project type: **client**
 
 <div align='center'><a href='https://github.com/darideveloper/borg484-web-animations' target='_blank'> <img src='https://github.com/darideveloper/borg484-web-animations/blob/master/logo.png?raw=true' alt='B. Web Animations' title='B. Web Animations' height='50px'/> </a></div>
 
+# Media
+
+![login](https://github.com/darideveloper/web-animations-dashboard/blob/master/screenshots/login.png?raw=true)
+
+![form](https://github.com/darideveloper/web-animations-dashboard/blob/master/screenshots/form.png?raw=true)
+
 # Details
 
 The dashboard its created with django, and it includes a full service for add and manage donations (donor name, amount, donor image, etc), who will be rendered in a web animations.
