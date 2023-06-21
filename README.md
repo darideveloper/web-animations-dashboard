@@ -1,5 +1,5 @@
-<div><a href='https://github.com/master/logo.png/blob/master/LICENSE' target='_blank'>
-            <img src='https://img.shields.io/github/license/master/logo.png.svg?style=for-the-badge' alt='MIT License' height='30px'/>
+<div><a href='https://github.com/darideveloper/web-animations-dashboard/blob/master/LICENSE' target='_blank'>
+            <img src='https://img.shields.io/github/license/darideveloper/web-animations-dashboard.svg?style=for-the-badge' alt='MIT License' height='30px'/>
         </a><a href='https://www.linkedin.com/in/francisco-dari-hernandez-6456b6181/' target='_blank'>
                 <img src='https://img.shields.io/static/v1?style=for-the-badge&message=LinkedIn&color=0A66C2&logo=LinkedIn&logoColor=FFFFFF&label=' alt='Linkedin' height='30px'/>
             </a><a href='https://t.me/darideveloper' target='_blank'>
@@ -12,9 +12,9 @@
                 <img src='https://img.shields.io/static/v1?style=for-the-badge&message=Discord&color=5865F2&logo=Discord&logoColor=FFFFFF&label=' alt='Discord' height='30px'/>
             </a><a href='mailto:darideveloper@gmail.com?subject=Hello Dari Developer' target='_blank'>
                 <img src='https://img.shields.io/static/v1?style=for-the-badge&message=Gmail&color=EA4335&logo=Gmail&logoColor=FFFFFF&label=' alt='Gmail' height='30px'/>
-            </a></div><div align='center'><br><br><img src='https://github.com/darideveloper/web-animations-dashboard/blob/master/logo.png?raw=true' alt='web animations dashboard' height='80px'/>
+            </a></div><div align='center'><br><br><img src='https://github.com/darideveloper/web-animations-dashboard/blob/master/logo.png?raw=true' alt='Web Animations Dashboard' height='80px'/>
 
-# web animations dashboard
+# Web Animations Dashboard
 
 Dashboard for manage donations in the animations of the project [B. Web Animations](https://github.com/darideveloper/borg484-web-animations)
 
