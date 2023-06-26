@@ -12,4 +12,14 @@ class Mosaic (models.Model):
         verbose_name = 'Mosaic donor'
         verbose_name_plural = 'Mosaic donors'
         
+class ScreenLeaves (models.Model):
+    id = models.AutoField(primary_key=True)
+    donor_frirst_name = models.CharField(max_length=100)
+    donor_last_name = models.CharField(max_length=100, blank=True, default='')
     
+    def __str__ (self):
+        return f"{self.donor_frirst_name} {self.donor_last_name}"
+    
+    class Meta:
+        verbose_name = 'Screen leaves donor'
+        verbose_name_plural = 'Screen leaves donors'
