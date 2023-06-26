@@ -12,3 +12,9 @@ def get_donations_mosaic(request):
     # Return full donations model
     donations = models.Mosaic.objects.all()
     return JsonResponse(list(donations.values()), safe=False)
+
+def get_donations_screen_leaves(request):
+    
+    # Return full donations model
+    donations = models.ScreenLeaves.objects.all()
+    return JsonResponse(list(donations.values()), safe=False)
