@@ -23,3 +23,15 @@ class ScreenLeaves (models.Model):
     class Meta:
         verbose_name = 'Screen leaves donor'
         verbose_name_plural = 'Screen leaves donors'
+        
+class ChristmasLandingPage (models.Model):
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='christmas_landing_page')
+    
+    def __str__ (self):
+        return self.name
+    
+    class Meta:
+        verbose_name = 'Christmas landing page donor'
+        verbose_name_plural = 'Christmas landing page donors'
