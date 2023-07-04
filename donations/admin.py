@@ -14,3 +14,10 @@ class ScreenLeavesAdmin(admin.ModelAdmin):
     list_per_page = 50
     search_fields = ('donor_frirst_name', 'donor_last_name')
     ordering = ('donor_frirst_name','donor_last_name')
+    
+@admin.register(models.ChristmasLandingPage)
+class ChristmasLandingPageAdmin(admin.ModelAdmin):
+    list_display = ('name', 'image')
+    list_per_page = 50
+    search_fields = ('name',)
+    ordering = ('name',)
