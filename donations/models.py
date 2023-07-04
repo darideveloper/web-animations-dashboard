@@ -33,7 +33,7 @@ class ChristmasLandingPage (models.Model):
     ]
     
     id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100, unique=True)
     image = models.ImageField(upload_to='christmas_landing_page')
     size = models.CharField(
         max_length=1,
