@@ -18,3 +18,9 @@ def get_donations_screen_leaves(request):
     # Return full donations model
     donations = models.ScreenLeaves.objects.all()
     return JsonResponse(list(donations.values()), safe=False)
+
+def get_donations_christmas_landing_page(request):
+    
+    # Return full donations model
+    donations = models.ChristmasLandingPage.objects.all()
+    return JsonResponse(list(donations.values()), safe=False)
