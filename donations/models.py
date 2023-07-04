@@ -25,9 +25,21 @@ class ScreenLeaves (models.Model):
         verbose_name_plural = 'Screen leaves donors'
         
 class ChristmasLandingPage (models.Model):
+    
+    SIZES = [
+        ("s", "small"),
+        ("m", "medium"),
+        ("l", "large")
+    ]
+    
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=100)
     image = models.ImageField(upload_to='christmas_landing_page')
+    size = models.CharField(
+        max_length=1,
+        choices=SIZES,
+        default="s"
+    )
     
     def __str__ (self):
         return self.name

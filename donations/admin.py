@@ -17,7 +17,7 @@ class ScreenLeavesAdmin(admin.ModelAdmin):
     
 @admin.register(models.ChristmasLandingPage)
 class ChristmasLandingPageAdmin(admin.ModelAdmin):
-    list_display = ('name', 'image')
+    list_display = ('name', 'image', 'size')
     list_per_page = 50
     search_fields = ('name',)
     ordering = ('name',)
