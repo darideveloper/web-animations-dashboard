@@ -21,3 +21,10 @@ class ChristmasLandingPageAdmin(admin.ModelAdmin):
     list_per_page = 50
     search_fields = ('name',)
     ordering = ('name',)
+    
+@admin.register(models.CatDog)
+class CatDogAdmin (admin.ModelAdmin):
+    list_display = ('name', 'amount', 'team')
+    list_per_page = 50
+    search_fields = ('name', 'amount')
+    ordering = ('name', 'amount')

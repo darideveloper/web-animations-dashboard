@@ -47,3 +47,26 @@ class ChristmasLandingPage (models.Model):
     class Meta:
         verbose_name = 'Christmas landing page donor'
         verbose_name_plural = 'Christmas landing page donors'
+
+class CatDog (models.Model):
+    
+    ANIMALS = [
+        ("cat", "cat"),
+        ("dog", "dog"),
+    ]
+    
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=100, unique=True)
+    amount = models.DecimalField(max_digits=6, decimal_places=2, default=0.00)
+    team = models.CharField(
+        max_length=3,
+        choices=ANIMALS,
+        default="cat"
+    )
+    
+    def __str__ (self):
+        return self.name
+    
+    class Meta:
+        verbose_name = 'Cat Dog donor'
+        verbose_name_plural = 'Cat Dog donors'
