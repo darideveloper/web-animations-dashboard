@@ -1,5 +1,6 @@
 from donations import models
 from django.http import JsonResponse, HttpResponse
+from django.utils import timezone
 
 def home (request):
     
@@ -29,4 +30,17 @@ def get_donations_cat_dog (request):
     
     # Return full donations model
     donations = models.CatDog.objects.all()
-    return JsonResponse(list(donations.values()), safe=False)
+    donations_list = list(donations.values())
+    
+    # Get enabled from settings
+    now = timezone.now().astimezone()
+    enabled_found = models.Setting.objects.filter(name="CatDog", datetime__gte=now, enabled=True)
+    enabled = False
+    if enabled_found:
+        enabled = True
+        
+    # retu5n data
+    return JsonResponse({
+        "donations": donations_list,
+        "enabled": enabled,
+    }, safe=False)

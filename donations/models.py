@@ -75,14 +75,14 @@ class CatDog (models.Model):
 class Setting (models.Model):
     
     name = models.CharField(max_length=100, unique=True)
-    date = models.DateField(blank=True, null=True, default=timezone.now)
+    datetime = models.DateTimeField(blank=True, null=True, default=timezone.now)
     enabled = models.BooleanField(default=False)
     value = models.CharField(max_length=100, blank=True, null=True, default='')
     
     def __str__ (self):
         data = []
-        if self.date:
-            data.append(f"{self.date}")
+        if self.datetime:
+            data.append(f"{self.datetime}")
         if self.enabled:
             data.append(f"{self.enabled}")
         if self.value:
