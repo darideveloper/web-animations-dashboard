@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 class Mosaic (models.Model):
     id = models.AutoField(primary_key=True)
@@ -70,3 +71,21 @@ class CatDog (models.Model):
     class Meta:
         verbose_name = 'Cat Dog donor'
         verbose_name_plural = 'Cat Dog donors'
+        
+class Setting (models.Model):
+    
+    name = models.CharField(max_length=100, unique=True)
+    date = models.DateField(blank=True, null=True, default=timezone.now)
+    enable = models.BooleanField(default=False)
+    value = models.CharField(max_length=100, blank=True, null=True, default='')
+    
+    def __str__ (self):
+        data = []
+        if self.date:
+            data.append(f"{self.date}")
+        if self.enable:
+            data.append(f"{self.enable}")
+        if self.value:
+            data.append(f"{self.value}")
+            
+        return f"{self.name} ({' - '.join(data)})"
