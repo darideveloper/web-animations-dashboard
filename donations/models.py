@@ -76,15 +76,15 @@ class Setting (models.Model):
     
     name = models.CharField(max_length=100, unique=True)
     date = models.DateField(blank=True, null=True, default=timezone.now)
-    enable = models.BooleanField(default=False)
+    enabled = models.BooleanField(default=False)
     value = models.CharField(max_length=100, blank=True, null=True, default='')
     
     def __str__ (self):
         data = []
         if self.date:
             data.append(f"{self.date}")
-        if self.enable:
-            data.append(f"{self.enable}")
+        if self.enabled:
+            data.append(f"{self.enabled}")
         if self.value:
             data.append(f"{self.value}")
             

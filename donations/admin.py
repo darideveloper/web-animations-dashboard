@@ -28,3 +28,10 @@ class CatDogAdmin (admin.ModelAdmin):
     list_per_page = 50
     search_fields = ('name', 'amount')
     ordering = ('name', 'amount')
+    
+@admin.register(models.Setting)
+class SettingAdmin (admin.ModelAdmin):
+    list_display = ('name', 'date', 'enabled', 'value')
+    list_per_page = 50
+    search_fields = ('name', 'date', 'enabled', 'value')
+    ordering = ('name', 'date', 'enabled', 'value')
