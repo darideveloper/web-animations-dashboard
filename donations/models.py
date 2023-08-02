@@ -89,3 +89,16 @@ class Setting (models.Model):
             data.append(f"{self.value}")
             
         return f"{self.name} ({' - '.join(data)})"
+    
+class Planes (models.Model):
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=100, unique=True)
+    image = models.ImageField(upload_to='planes')
+    amount = models.IntegerField(default=0)
+    
+    def __str__ (self):
+        return self.name
+    
+    class Meta:
+        verbose_name = 'Planes donor'
+        verbose_name_plural = 'Planes donors'    
