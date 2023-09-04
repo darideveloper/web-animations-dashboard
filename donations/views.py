@@ -44,3 +44,14 @@ def get_donations_cat_dog (request):
         "donations": donations_list,
         "enabled": enabled,
     }, safe=False)
+
+def pinata (request): 
+    
+    # Return full donations model
+    donations = models.Pinata.objects.all()
+    donations_list = list(donations.values())
+    
+    # retu5n data
+    return JsonResponse({
+        "donations": donations_list,
+    }, safe=False)
