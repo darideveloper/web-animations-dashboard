@@ -35,10 +35,11 @@ class SettingAdmin (admin.ModelAdmin):
     list_per_page = 50
     search_fields = ('name', 'datetime', 'enabled', 'value')
     ordering = ('name', 'datetime', 'enabled', 'value')
-    
-@admin.register(models.Planes)
-class PlanesAdmin (admin.ModelAdmin):
-    list_display = ('name', 'image', 'amount')
+
+@admin.register(models.Pinata)
+class PinataAdmin (admin.ModelAdmin):
+    list_display = ('name', 'amount', 'team')
     list_per_page = 50
-    search_fields = ('name',)
-    ordering = ('name',)
+    search_fields = ('name', 'amount')
+    ordering = ('name', 'amount')
+    list_filter = ('team',)
