@@ -90,15 +90,23 @@ class Setting (models.Model):
             
         return f"{self.name} ({' - '.join(data)})"
     
-class Planes (models.Model):
+class Pinata (models.Model):
+    TEAMS = [
+        ("team1", "TEAM 1"),
+        ("team2", "TEAM 2"),
+        ("team3", "TEAM 3"),
+    ]
+    
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=100, unique=True)
-    image = models.ImageField(upload_to='planes')
     amount = models.IntegerField(default=0)
+    team = models.CharField(
+        max_length=5,
+        choices=TEAMS,
+        default="cat"
+    )
     
     def __str__ (self):
-        return self.name
-    
-    class Meta:
-        verbose_name = 'Planes donor'
-        verbose_name_plural = 'Planes donors'    
+        return f"{self.name} ({self.amount})" 
+        
+        
