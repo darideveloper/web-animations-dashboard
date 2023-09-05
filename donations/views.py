@@ -51,6 +51,12 @@ def pinata (request):
     donations = models.Pinata.objects.all()
     donations_list = list(donations.values())
     
+    # Add team name
+    teams = models.PinataTeam.objects.all()
+    
+    for donation in donations_list:
+        donation["team"] = teams.get(id=donation["team_id"]).name
+    
     # retu5n data
     return JsonResponse({
         "donations": donations_list,
