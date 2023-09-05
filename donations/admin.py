@@ -43,3 +43,9 @@ class PinataAdmin (admin.ModelAdmin):
     search_fields = ('name', 'amount')
     ordering = ('name', 'amount')
     list_filter = ('team',)
+    
+@admin.register(models.PinataTeam)
+class PinataTeamAdmin (admin.ModelAdmin):
+    list_display = ('name',)
+    list_per_page = 50
+    ordering = ('name',)
