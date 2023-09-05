@@ -90,23 +90,19 @@ class Setting (models.Model):
             
         return f"{self.name} ({' - '.join(data)})"
     
-class Pinata (models.Model):
-    TEAMS = [
-        ("team1", "TEAM 1"),
-        ("team2", "TEAM 2"),
-        ("team3", "TEAM 3"),
-    ]
+class PinataTeam (models.Model): 
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=100, unique=True)
     
+    def __str__ (self):
+        return self.name
+    
+class Pinata (models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=100, unique=True)
     amount = models.IntegerField(default=0)
-    team = models.CharField(
-        max_length=5,
-        choices=TEAMS,
-        default="cat"
-    )
+    team = models.ForeignKey('PinataTeam', on_delete=models.CASCADE)
     
     def __str__ (self):
         return f"{self.name} ({self.amount})" 
-        
         
