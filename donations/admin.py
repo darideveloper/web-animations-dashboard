@@ -50,4 +50,6 @@ class PinataTeamAdmin (admin.ModelAdmin):
     list_per_page = 50
     ordering = ('name',)
     
-# @admin.register(models.BitStar
+@admin.register(models.BigStar)
+class BigStarAdmin (admin.ModelAdmin):
+    list_per_page = 50
