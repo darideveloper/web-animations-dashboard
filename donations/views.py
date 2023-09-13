@@ -61,3 +61,14 @@ def pinata (request):
     return JsonResponse({
         "donations": donations_list,
     }, safe=False)
+    
+def big_star (request):
+    
+    # Return full donations model
+    donations = models.BigStar.objects.all()
+    donations_list = list(donations.values())
+    
+    # Return data
+    return JsonResponse({
+        "donations": donations_list,
+    }, safe=False)
