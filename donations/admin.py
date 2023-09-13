@@ -49,3 +49,5 @@ class PinataTeamAdmin (admin.ModelAdmin):
     list_display = ('name',)
     list_per_page = 50
     ordering = ('name',)
+    
+# @admin.register(models.BitStar
